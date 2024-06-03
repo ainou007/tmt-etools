@@ -3,7 +3,7 @@ import { isFrance } from './isFrance';
 
 export const checkCondition = (codeSource: string, lang: string, brand: string) => {
   const conditionOK = '*Oka&iuml;di la bonne id&eacute;e, la bonne identit&eacute;.';
-  const conditionOB = '';
+  const conditionOB = "*Oba&iuml;bi, la plus belle id&eacute;e d'amour.";
   const error: TEmailError = {
     title: 'Condition',
     message: '',
