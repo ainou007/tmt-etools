@@ -21,7 +21,7 @@ export const emailTypes: TEmailTypes = {
     { lang: 'frCH', link: 'https://fr.okaidi.ch' },
     { lang: 'plPL', link: 'https://www.okaidi.pl' },
     { lang: 'siSI', link: 'https://www.okaidi.si' },
-    { lang: 'hrHR', link: 'https://catalog.okaidi.com' },
+    { lang: 'hrHR', link: 'https://catalog.okaidi.com' }, // https://okaidi.com/landing-croatie
     { lang: 'roRO', link: 'https://www.okaidi.ro' },
   ],
   sqls: [

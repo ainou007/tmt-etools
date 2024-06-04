@@ -14,11 +14,9 @@ export const checkCondition = (codeSource: string, lang: string, brand: string) 
       if (!codeSource.includes(conditionOK)) {
         error.message += `<p>Condition <b>"${conditionOK}"</b> is missing </p>`;
       }
-
-      if (brand === 'ok') {
-        if (!codeSource.includes(conditionOB)) {
-          error.message += `<p>Condition <b>"${conditionOB}"</b> is missing </p>`;
-        }
+    } else {
+      if (!codeSource.includes(conditionOB)) {
+        error.message += `<p>Condition <b>"${conditionOB}"</b> is missing </p>`;
       }
     }
   } else {
@@ -26,8 +24,7 @@ export const checkCondition = (codeSource: string, lang: string, brand: string) 
       if (codeSource.includes(conditionOK)) {
         error.message += `<p> Please remove <b>"${conditionOK}"</b> </p>`;
       }
-    }
-    if (brand === 'ob') {
+    } else {
       if (codeSource.includes(conditionOB)) {
         error.message += `<p> Please remove  <b>"${conditionOB}"</b> </p>`;
       }

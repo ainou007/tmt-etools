@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { Eraser, MailCheck } from 'lucide-react';
+import { Eraser, MailCheck, Trash2 } from 'lucide-react';
 import { useState } from 'react';
 import Checking from './Checking';
 import ValidEmail from './ValidEmail';
@@ -30,29 +30,22 @@ const EmailValidator = () => {
       lang: 'frFR',
       brand: 'ok',
     },
+    mode: 'onSubmit',
   });
 
   const onSubmit = (data: z.infer<typeof FormSchema>) => {
     setIsCheckStart(true);
     check(data.code_source, data.type, data.lang, data.brand);
   };
-  const clicked = () => {
-    // console.log(form.getValues());
-  };
-
-  const onTypeChange = () => {
-    form.setValue('lang', '');
-  };
+  const onTypeChange = () => form.setValue('lang', '');
 
   //
   const resetSettings = () => {
     setIsCheckStart(false);
     form.reset();
   };
-  const editSettings = () => {
-    setIsCheckStart(false);
-    // form.reset();
-  };
+  const resetCodeSource = () => form.setValue('code_source', '');
+  const editSettings = () => setIsCheckStart(false);
 
   const redner = () => {
     if (isCheckStart) {
@@ -70,7 +63,12 @@ const EmailValidator = () => {
         <div className='space-y-3'>
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-6'>
-              <TextArea name='code_source' placeholder='Code source' formControl={form.control} label='Enter Code Source' />
+              <div>
+                <TextArea name='code_source' placeholder='Code source' formControl={form.control} label='Enter Code Source' />
+                <Button type='button' onClick={resetCodeSource} className='mt-2' size={'sm'}>
+                  <Trash2 size={12} className='mb-0.5' /> Clear
+                </Button>
+              </div>
               <RadioButtonGroup name='type' formControl={form.control} label='Email Type' onTypeChange={onTypeChange} inputs={['sql', 'montage full']} />
               <RadioButtonGroup name='brand' formControl={form.control} label='Email Brand<' inputs={['ok', 'ob']} />
               <SelectBox
@@ -82,7 +80,7 @@ const EmailValidator = () => {
               />
 
               <div className='flex gap-2'>
-                <Button onClick={clicked} type='submit'>
+                <Button type='submit'>
                   <MailCheck className='mb- size-3' /> Start Validation
                 </Button>
                 <Button variant={'outline'} onClick={resetSettings}>
