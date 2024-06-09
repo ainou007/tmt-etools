@@ -1,4 +1,3 @@
-import { Settings } from 'lucide-react';
 import Logo from '../Logo';
 import navLinks from '@/constants/navLink';
 import { Separator } from '../ui/separator';

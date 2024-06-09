@@ -1,5 +1,5 @@
 import { TNavLink } from '@/types';
-import { Binary, CaseSensitive, MailCheck, MailPlus } from 'lucide-react';
+import { Binary, CaseSensitive, MailCheck } from 'lucide-react';
 
 const navLinks: TNavLink[] = [
   {
@@ -17,11 +17,6 @@ const navLinks: TNavLink[] = [
     route: 'email-validator',
     icon: MailCheck,
   },
-  // {
-  //   label: 'Email Builder',
-  //   route: 'email-builder',
-  //   icon: MailPlus,
-  // },
 ];
 
 export default navLinks;
