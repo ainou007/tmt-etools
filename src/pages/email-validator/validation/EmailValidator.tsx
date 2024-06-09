@@ -71,7 +71,7 @@ const EmailValidator = () => {
                 </Button>
               </div>
               <RadioButtonGroup name='type' formControl={form.control} label='Email Type' onTypeChange={onTypeChange} inputs={['sql', 'montage full']} />
-              <RadioButtonGroup name='brand' formControl={form.control} label='Email Brand<' inputs={['ok', 'ob']} />
+              <RadioButtonGroup name='brand' formControl={form.control} label='Email Brand' inputs={['ok', 'ob']} />
               <SelectBox
                 data={form.getValues('type') === 'sql' ? emailTypes.sqls : emailTypes.langs}
                 formControl={form.control}
@@ -84,7 +84,7 @@ const EmailValidator = () => {
                 <Button type='submit'>
                   <MailCheck className='mb- size-3' /> Start Validation
                 </Button>
-                <Button variant={'outline'} onClick={resetSettings}>
+                <Button type='button' variant={'outline'} onClick={resetSettings}>
                   <Eraser className='mb- size-3' /> Clear Settings
                 </Button>
               </div>
