@@ -17,11 +17,11 @@ const navLinks: TNavLink[] = [
     route: 'email-validator',
     icon: MailCheck,
   },
-  {
-    label: 'Email Builder',
-    route: 'email-builder',
-    icon: MailPlus,
-  },
+  // {
+  //   label: 'Email Builder',
+  //   route: 'email-builder',
+  //   icon: MailPlus,
+  // },
 ];
 
 export default navLinks;

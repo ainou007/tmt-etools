@@ -20,7 +20,7 @@ export const brandLogoCheck = (codeSource: string, lang: string, brand: string) 
       }
     } else {
       if (codeSource.includes(ob) || codeSource.includes(obfr) || codeSource.includes(okfr)) {
-        error.message += '<p> Must use <b>Ok</b> Logo with out <b>*</b> </p>';
+        error.message += '<p> Must use <b>Ok</b> Logo without <b>*</b> </p>';
       }
     }
   }
@@ -32,7 +32,7 @@ export const brandLogoCheck = (codeSource: string, lang: string, brand: string) 
       }
     } else {
       if (codeSource.includes(ok) || codeSource.includes(okfr) || codeSource.includes(obfr)) {
-        error.message += '<p> Must use <b>OB</b> Logo with out <b>*</b> </p>';
+        error.message += '<p> Must use <b>OB</b> Logo without <b>*</b> </p>';
       }
     }
   }

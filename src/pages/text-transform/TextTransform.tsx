@@ -21,11 +21,7 @@ const TextTransform = () => {
 
   return (
     <>
-      <Header title='Text Transform' icon={CaseSensitive}>
-        <p>
-          Convertir un texte en <span className='font-semibold'>majuscules</span> ou <span className='font-semibold'>minuscules</span> pour tous les alphabets.
-        </p>
-      </Header>
+      <Header title='Text Transform' icon={CaseSensitive} />
       <div className='space-y-3'>
         <div className='grid grid-cols-12 gap-5'>
           <div className='col-span-6'>

@@ -33,9 +33,7 @@ const TextEncoder = () => {
 
   return (
     <>
-      <Header title='Text Encoder' icon={Binary}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident deleniti nemo mollitia vitae eos,
-      </Header>
+      <Header title='Text Encoder' icon={Binary} />
       <div className='space-y-3'>
         <div className='grid grid-cols-12 gap-5'>
           <div className='col-span-6'>

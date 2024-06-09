@@ -1,5 +1,5 @@
-import { Button } from '@/components/ui/button';
-import { Eraser, MailCheck, Trash2 } from 'lucide-react';
+import { Button, buttonVariants } from '@/components/ui/button';
+import { Eraser, MailCheck, MessageCircleQuestion, Trash2 } from 'lucide-react';
 import { useState } from 'react';
 import Checking from './Checking';
 import ValidEmail from './ValidEmail';
@@ -17,6 +17,7 @@ import { Link } from 'react-router-dom';
 import TextArea from '@/components/form/TextArea';
 import RadioButtonGroup from '@/components/form/RadioButtonGroup';
 import SelectBox from '@/components/form/SelectBox';
+import { cn } from '@/lib/utils';
 
 const EmailValidator = () => {
   const [isCheckStart, setIsCheckStart] = useState(false);
@@ -97,9 +98,8 @@ const EmailValidator = () => {
   return (
     <>
       <Header title='Email Validator' icon={MailCheck}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident deleniti nemo mollitia vitae eos,{' '}
-        <Link className='font-semibold' to={'about'}>
-          about ...
+        <Link className={cn(buttonVariants({ variant: 'outline', size: 'icon' }), 'absolute right-2 top-2')} to={'about'}>
+          <MessageCircleQuestion size={18} />
         </Link>
       </Header>
       <div className='space-y-3 '>{redner()}</div>{' '}

@@ -4,9 +4,7 @@ import { MailPlus } from 'lucide-react';
 const EmailBuilder = () => {
   return (
     <>
-      <Header title='Email Builder' icon={MailPlus}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident deleniti nemo mollitia vitae eos,
-      </Header>
+      <Header title='Email Builder' icon={MailPlus} />
 
       <div className='space-y-3 '>Comming soon</div>
     </>

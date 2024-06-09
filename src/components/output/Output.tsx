@@ -25,8 +25,8 @@ const Output = memo(({ output, label }: TOutputProps) => {
         )}
       </Button>
       <Alert className='h-full'>
-        <AlertTitle className='select-none mb-2'> {label} </AlertTitle>
-        <AlertDescription className='font-light'>{output}</AlertDescription>
+        <AlertTitle className='select-none mb-2 text-primary'> {label} </AlertTitle>
+        <AlertDescription className='font-semibold mt-5 '>{output}</AlertDescription>
       </Alert>
     </div>
   );

@@ -23,7 +23,7 @@ const Aside = ({ isFullAside }: TAsideProps) => {
             <li></li>
           </ul>
         </div>
-        <AsideLink isFullAside={isFullAside} label='Settings' route='settings' icon={Settings} />
+        {/* <AsideLink isFullAside={isFullAside} label='Settings' route='settings' icon={Settings} /> */}
       </div>
     </div>
   );

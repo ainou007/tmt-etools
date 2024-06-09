@@ -1,7 +1,7 @@
-import { characters } from './../constants/chars';
 import { toHex } from '@/lib/utils';
 import { deleteTags } from './deleteTags';
 import { TEmailError } from '@/hooks/useEmailValidation';
+import { characters } from '@/constants/chars';
 
 export type unCodedChar = {
   char: string;

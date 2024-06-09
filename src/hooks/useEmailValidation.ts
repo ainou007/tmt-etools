@@ -5,6 +5,7 @@ import { checkIncludes } from '@/utils/checkIncludes';
 import { checkLinks } from '@/utils/checkLinks';
 import { footerHeaderCheck } from '@/utils/footerHeaderCheck';
 import { getUncodedChars } from '@/utils/getUncodedChars';
+import { hostedImages } from '@/utils/hostedImages';
 import { phValidation } from '@/utils/phValidation';
 import { useState } from 'react';
 
@@ -36,6 +37,7 @@ const useEmailValidation = () => {
         setErrors((prevErrors) => [...prevErrors, checkLinks(email, lang, type)]);
         setErrors((prevErrors) => [...prevErrors, checkIncludes(email, lang)]);
         setErrors((prevErrors) => [...prevErrors, checkCode(email)]);
+        setErrors((prevErrors) => [...prevErrors, hostedImages(email)]);
 
         setIsLoading(false);
       }, 500);
