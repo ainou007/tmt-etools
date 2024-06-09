@@ -10,13 +10,7 @@ type TTextAreaProps<TFieldValue extends FieldValues> = {
   inputs: string[];
   onTypeChange?: () => void;
 };
-const RadioButtonGroup = <TFieldValue extends FieldValues>({
-  formControl,
-  label,
-  name,
-  inputs,
-  onTypeChange,
-}: TTextAreaProps<TFieldValue>) => {
+const RadioButtonGroup = <TFieldValue extends FieldValues>({ formControl, label, name, inputs, onTypeChange }: TTextAreaProps<TFieldValue>) => {
   return (
     <FormField
       control={formControl}
@@ -32,7 +26,7 @@ const RadioButtonGroup = <TFieldValue extends FieldValues>({
                     <FormControl>
                       <RadioGroupItem value={toSnackCass(input)} />
                     </FormControl>
-                    <FormLabel className='font-normal'>{input}</FormLabel>
+                    <FormLabel className='font-normal cursor-pointer'>{input}</FormLabel>
                   </FormItem>
                 );
               })}

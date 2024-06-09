@@ -5,9 +5,9 @@ type TErrorItemProps = { title: string; message: string };
 const ErrorItem = ({ title, message }: TErrorItemProps) => {
   return (
     <Alert variant='destructive' className='h-full'>
-      <ShieldAlert className='size-4' />
-      <AlertTitle className=''> {title} </AlertTitle>
-      <AlertDescription className='text-xs '>
+      <ShieldAlert className='size-5 mt-1' />
+      <AlertTitle className='text-xl mb-1.5'> {title} </AlertTitle>
+      <AlertDescription className='text-base '>
         <div
           className='Container'
           dangerouslySetInnerHTML={{

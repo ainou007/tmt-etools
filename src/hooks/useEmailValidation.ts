@@ -1,8 +1,8 @@
 import { brandLogoCheck } from '@/utils/brandLogoCheck';
-import { checkCode } from '@/utils/checkCode';
 import { checkCondition } from '@/utils/checkCondition';
 import { checkIncludes } from '@/utils/checkIncludes';
 import { checkLinks } from '@/utils/checkLinks';
+import { checkNotifyMailCode } from '@/utils/checkNotifyMailCode';
 import { footerHeaderCheck } from '@/utils/footerHeaderCheck';
 import { getUncodedChars } from '@/utils/getUncodedChars';
 import { hostedImages } from '@/utils/hostedImages';
@@ -36,7 +36,7 @@ const useEmailValidation = () => {
         setErrors((prevErrors) => [...prevErrors, checkCondition(email, lang, brand)]);
         setErrors((prevErrors) => [...prevErrors, checkLinks(email, lang, type)]);
         setErrors((prevErrors) => [...prevErrors, checkIncludes(email, lang)]);
-        setErrors((prevErrors) => [...prevErrors, checkCode(email)]);
+        setErrors((prevErrors) => [...prevErrors, checkNotifyMailCode(email)]);
         setErrors((prevErrors) => [...prevErrors, hostedImages(email)]);
 
         setIsLoading(false);
