@@ -19,28 +19,28 @@ export const phValidation = (email: string, type: string) => {
   // SQL: Le PH doit etre "PH"
 
   if (type === 'sql') {
-    if (ph === ''.toString() || title === ''.toString()) {
-      error.message += 'The <b>title</b> or <b>ph section</b> is <b>empty</b> must be equal <b>"PH"</b>';
+    if (ph === '' || title === '') {
+      error.message += 'The <b>Title</b> or <b>ph section</b> is <b>empty</b> must be equal <b>"PH"</b>';
       return error;
     }
     if (ph !== 'ph' || title !== 'ph') {
-      error.message += 'The <b>title</b> or <b>ph section</b>  must be equal <b>"PH"</b>';
+      error.message += 'The <b>Title</b> or <b>ph section</b>  must be equal <b>"PH"</b>';
       return error;
     }
     return null;
   } else {
-    if (ph === ''.toString() || title === ''.toString()) {
-      error.message += 'The <b>title</b> or <b>ph section</b> is <b>empty</b> </b>';
+    if (ph === '' || title === '') {
+      error.message += 'The <b>Title</b> or <b>ph section</b> is <b>empty</b> </b>';
       return error;
     }
     if (ph == 'ph' || title == 'ph') {
-      error.message += 'The <b>title</b> or <b>ph section</b>  must be equal <b>"PH"</b>';
+      error.message += 'The <b>Title</b> or <b>PH Section</b> must be different from <b>"PH"</b>';
 
       return error;
     }
 
     if (ph !== title) {
-      error.message += 'The <b>title</b> Must be Equal the  <b>ph section</b>';
+      error.message += 'The <b>Title</b> must be equal to the <b>PH Section</b>.';
       return error;
     }
 
