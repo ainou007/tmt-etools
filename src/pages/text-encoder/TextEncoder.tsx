@@ -2,23 +2,18 @@ import Header from '@/components/header/Header';
 import { Binary, RotateCcw } from 'lucide-react';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
-import { ChangeEvent, useEffect, useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 import { Char, characters } from '@/constants/chars';
 import { toHex } from '@/lib/utils';
 import { toast } from 'sonner';
 import Output from '@/components/output/Output';
-import { useCopyToClipboard } from '@uidotdev/usehooks';
 
 const TextEncoder = () => {
   const [text, setText] = useState('');
-  const [, copyToClipboard] = useCopyToClipboard();
 
   const changeTextHandler = (e: ChangeEvent<HTMLTextAreaElement>) => {
     setText(e.target.value);
   };
-  useEffect(() => {
-    if (text.length > 0) copyToClipboard(convertText());
-  }, [text]);
 
   const clearText = () => {
     if (text === '') return;
