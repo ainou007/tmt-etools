@@ -17,7 +17,7 @@ const TextEncoder = () => {
     setText(e.target.value);
   };
   useEffect(() => {
-    copyToClipboard(convertText());
+    if (text.length > 0) copyToClipboard(convertText());
   }, [text]);
 
   const clearText = () => {
