@@ -12,7 +12,7 @@ type TOutputProps = {
 const Output = memo(({ output, label }: TOutputProps) => {
   const { isCopied, copyTextHandler } = useOutput(output);
   return (
-    <div className='h-full relative'>
+    <div className='h-full relative' onClick={copyTextHandler}>
       <Button onClick={copyTextHandler} className='absolute right-1 top-1 z-50 text-xs' variant={'outline'} size={'xs'}>
         {isCopied ? (
           <>
